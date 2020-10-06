@@ -1,0 +1,128 @@
+$box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+#greeting {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    margin-bottom: 30px;
+
+    div:first-child {
+        display: inline-block;
+        width: 400px;
+        height: 300px;
+        margin-right: 4vw;
+        box-sizing: border-box;
+        background-image: url("/img/self_portrait.jpg");
+        background-size: cover;
+        background-position: center;
+        background-origin: content-box;
+        background-repeat: no-repeat;
+        border-radius: 20px;
+        box-shadow: $box-shadow;
+    }
+
+    div:nth-child(2) {
+        display: inline-block;
+        font-size: 18px;
+
+        h2 {
+            font-size: 2em;
+            font-weight: bold;
+            margin-top: 0.4em;
+            margin-bottom: 0.4em;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 0.8em;
+        }
+
+        p {
+            line-height: 1.15em;
+            margin-bottom: 0.4em;
+
+            &:last-child {
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+#projects {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    & > div {
+        position: relative;
+        height: 280px;
+        width: 280px;
+        margin: 25px;
+        border-radius: 20px;
+        box-shadow: $box-shadow;
+        box-sizing: border-box;
+
+        .image-container {
+            display: flex;
+            align-items: flex-end;
+            position: absolute;
+            top: 10px;
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+            border-radius: 20px;
+            z-index: -1;
+
+            img {
+                width: 100%;
+                height: 210px;
+                border-radius: 20px;
+                object-fit: contain;
+                vertical-align: middle;
+            }
+        }
+
+        .text-container {
+            position: relative;
+            height: 40px;
+            margin: 10px;
+            font-size: 18px;
+            line-height: 40px;
+            font-weight: 500;
+            text-align: center;
+
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: 0px;
+                height: 3px;
+                border-radius: 1.5px;
+            }
+
+            &.nsl:after {
+                left: 17%;
+                right: 17%;
+                background-color: #7A94FF;
+            }
+
+            &.gh:after {
+                left: 31%;
+                right: 31%;
+                background-color: #3B1D82;
+            }
+
+            &.she:after {
+                left: 15%;
+                right: 15%;
+                background-color: #D9025C;
+            }
+
+            &.bact:after {
+                left: 5%;
+                right: 5%;
+                background-color: #7A94FF;
+            }
+        }
+    }
+}
