@@ -1,10 +1,11 @@
-$box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+@use "var";
+@use "mix";
 
 #greeting {
     display: flex;
     flex-flow: row;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 
     div:first-child {
         display: inline-block;
@@ -17,8 +18,8 @@ $box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         background-position: center;
         background-origin: content-box;
         background-repeat: no-repeat;
-        border-radius: 20px;
-        box-shadow: $box-shadow;
+        border-radius: var.$card-border-radius;
+        box-shadow: var.$box-shadow;
     }
 
     div:nth-child(2) {
@@ -49,80 +50,124 @@ $box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     }
 }
 
-#projects {
+#contact {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    flex-flow: row;
+    justify-content: space-between;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0;
+    box-sizing: border-box;
+    border-radius: var.$card-border-radius;
+    font-size: 18px;
 
     & > div {
-        position: relative;
-        height: 280px;
-        width: 280px;
-        margin: 25px;
-        border-radius: 20px;
-        box-shadow: $box-shadow;
-        box-sizing: border-box;
+        padding: 0 20px;
+    }
 
-        .image-container {
-            display: flex;
-            align-items: flex-end;
-            position: absolute;
-            top: 10px;
-            bottom: 10px;
-            left: 10px;
-            right: 10px;
-            border-radius: 20px;
-            z-index: -1;
+    & > div:first-child {
+        flex-grow: 1;
+        padding-right: 40px;
+        border-right: 2px solid #CCCCCC;
+    }
 
-            img {
-                width: 100%;
-                height: 210px;
-                border-radius: 20px;
-                object-fit: contain;
-                vertical-align: middle;
+    & > div:last-child {
+        padding-left: 40px;
+        flex-basis: 360px;
+        flex-grow: 0;
+        flex-shrink: 0;
+        order: 2;
+    }
+
+    h3 {
+        font-size: 1.5em;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+
+    form div {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+    }
+
+    input {
+        display: inline-block;
+        width: 45%;
+        min-width: 250px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        border-bottom: 2px solid #CCCCCC;
+        transition: border-bottom-color 0.2s;
+        margin-bottom: 18px;
+
+        &:first-child {
+            margin-right: 10%;
+
+            &:focus {
+                border-bottom-color: mix.random-focus-color()
             }
         }
 
-        .text-container {
+        &:nth-child(2):focus {
+            border-bottom-color: mix.random-focus-color()
+        }
+    }
+
+    textarea {
+        width: 100%;
+        height: 200px;
+        padding: 10px;
+        box-sizing: border-box;
+        background-color: var.$card-background;
+        border-radius: var.$card-border-radius;
+        border: 2px solid #CCCCCC;
+        outline: none;
+        resize: none;
+        transition: border-color 0.2s;
+
+        &:focus {
+            border-color: mix.random-focus-color();
+        }
+    }
+
+    p {
+        height: 40px;
+        width: 190px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        padding: 5px 20px 5px 0;
+        box-sizing: border-box;
+        background-color: var.$card-background;
+        border-radius: 20px;
+        border: 2px solid #CCCCCC;
+
+        a {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            height: 100%;
+            text-decoration: none;
+            color: black;
+
+            img {
+                display: inline-block;
+                height: 100%;
+                width: 67px;
+                object-fit: contain;
+            }
+
+            span {
+                font-size: 1.1em;
+                line-height: 40px;
+            }
+        }
+
+        &:nth-child(2) a img {
             position: relative;
-            height: 40px;
-            margin: 10px;
-            font-size: 18px;
-            line-height: 40px;
-            font-weight: 500;
-            text-align: center;
-
-            &:after {
-                content: "";
-                position: absolute;
-                bottom: 0px;
-                height: 3px;
-                border-radius: 1.5px;
-            }
-
-            &.nsl:after {
-                left: 17%;
-                right: 17%;
-                background-color: #7A94FF;
-            }
-
-            &.gh:after {
-                left: 31%;
-                right: 31%;
-                background-color: #3B1D82;
-            }
-
-            &.she:after {
-                left: 15%;
-                right: 15%;
-                background-color: #D9025C;
-            }
-
-            &.bact:after {
-                left: 5%;
-                right: 5%;
-                background-color: #7A94FF;
-            }
+            left: 3.7px;
         }
     }
 }

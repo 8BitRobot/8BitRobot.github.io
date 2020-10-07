@@ -1,150 +1,150 @@
 #greeting {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row;
-          flex-flow: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 30px;
+  flex-flow: row;
+  justify-content: center;
+  margin-bottom: 50px;
 }
-
 #greeting div:first-child {
   display: inline-block;
   width: 400px;
   height: 300px;
   margin-right: 4vw;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   background-image: url("/img/self_portrait.jpg");
   background-size: cover;
   background-position: center;
   background-origin: content-box;
   background-repeat: no-repeat;
   border-radius: 20px;
-  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
-
 #greeting div:nth-child(2) {
   display: inline-block;
   font-size: 18px;
 }
-
 #greeting div:nth-child(2) h2 {
   font-size: 2em;
   font-weight: bold;
   margin-top: 0.4em;
   margin-bottom: 0.4em;
 }
-
 #greeting div:nth-child(2) h3 {
   font-size: 1.5em;
   font-weight: bold;
   margin-bottom: 0.8em;
 }
-
 #greeting div:nth-child(2) p {
   line-height: 1.15em;
   margin-bottom: 0.4em;
 }
-
 #greeting div:nth-child(2) p:last-child {
   margin-top: 30px;
 }
 
-#projects {
-  display: -webkit-box;
-  display: -ms-flexbox;
+#contact {
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-#projects > div {
-  position: relative;
-  height: 280px;
-  width: 280px;
-  margin: 25px;
+  flex-flow: row;
+  justify-content: space-between;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 0;
+  box-sizing: border-box;
   border-radius: 20px;
-  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-#projects > div .image-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  position: absolute;
-  top: 10px;
-  bottom: 10px;
-  left: 10px;
-  right: 10px;
-  border-radius: 20px;
-  z-index: -1;
-}
-
-#projects > div .image-container img {
-  width: 100%;
-  height: 210px;
-  border-radius: 20px;
-  -o-object-fit: contain;
-     object-fit: contain;
-  vertical-align: middle;
-}
-
-#projects > div .text-container {
-  position: relative;
-  height: 40px;
-  margin: 10px;
   font-size: 18px;
-  line-height: 40px;
+}
+#contact > div {
+  padding: 0 20px;
+}
+#contact > div:first-child {
+  flex-grow: 1;
+  padding-right: 40px;
+  border-right: 2px solid #CCCCCC;
+}
+#contact > div:last-child {
+  padding-left: 40px;
+  flex-basis: 360px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  order: 2;
+}
+#contact h3 {
+  font-size: 1.5em;
   font-weight: 500;
-  text-align: center;
+  margin-bottom: 20px;
+}
+#contact form div {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+#contact input {
+  display: inline-block;
+  width: 45%;
+  min-width: 250px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #CCCCCC;
+  transition: border-bottom-color 0.2s;
+  margin-bottom: 18px;
+}
+#contact input:first-child {
+  margin-right: 10%;
+}
+#contact input:first-child:focus {
+  border-bottom-color: #F9844A;
+}
+#contact input:nth-child(2):focus {
+  border-bottom-color: #F9C74F;
+}
+#contact textarea {
+  width: 100%;
+  height: 200px;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #EEEEEE;
+  border-radius: 20px;
+  border: 2px solid #CCCCCC;
+  outline: none;
+  resize: none;
+  transition: border-color 0.2s;
+}
+#contact textarea:focus {
+  border-color: #90BE6D;
+}
+#contact p {
+  height: 40px;
+  width: 190px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  padding: 5px 20px 5px 0;
+  box-sizing: border-box;
+  background-color: #EEEEEE;
+  border-radius: 20px;
+  border: 2px solid #CCCCCC;
+}
+#contact p a {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 100%;
+  text-decoration: none;
+  color: black;
+}
+#contact p a img {
+  display: inline-block;
+  height: 100%;
+  width: 67px;
+  object-fit: contain;
+}
+#contact p a span {
+  font-size: 1.1em;
+  line-height: 40px;
+}
+#contact p:nth-child(2) a img {
+  position: relative;
+  left: 3.7px;
 }
 
-#projects > div .text-container:after {
-  content: "";
-  position: absolute;
-  bottom: 0px;
-  height: 3px;
-  border-radius: 1.5px;
-}
-
-#projects > div .text-container.nsl:after {
-  left: 17%;
-  right: 17%;
-  background-color: #7A94FF;
-}
-
-#projects > div .text-container.gh:after {
-  left: 31%;
-  right: 31%;
-  background-color: #3B1D82;
-}
-
-#projects > div .text-container.she:after {
-  left: 15%;
-  right: 15%;
-  background-color: #D9025C;
-}
-
-#projects > div .text-container.bact:after {
-  left: 5%;
-  right: 5%;
-  background-color: #7A94FF;
-}
 /*# sourceMappingURL=index.css.map */
