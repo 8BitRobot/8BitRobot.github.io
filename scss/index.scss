@@ -86,10 +86,22 @@
         margin-bottom: 20px;
     }
 
-    form div {
-        display: flex;
-        flex-flow: row;
-        justify-content: space-between;
+    form {
+        div {
+            display: flex;
+            flex-flow: row;
+            justify-content: space-between;
+        }
+
+        span {
+            margin-left: 4px;
+            font-size: 0.78em;
+            color: #B70104;
+
+            &.success {
+                color: #009008;
+            }
+        }
     }
 
     input {
@@ -118,8 +130,9 @@
 
     textarea {
         width: 100%;
-        height: 200px;
+        height: 150px;
         padding: 10px;
+        margin-bottom: 18px;
         box-sizing: border-box;
         background-color: var.$card-background;
         border-radius: var.$card-border-radius;
@@ -133,24 +146,34 @@
         }
     }
 
+    button {
+        width: 130px;
+        padding: 5px 20px;
+        border: 2px solid #CCCCCC;
+        border-radius: 20px;
+        background-color: var.$card-background;
+        cursor: pointer;
+    }
+
     p {
         height: 40px;
-        width: 190px;
+        width: 100%;
         margin-top: 30px;
         margin-bottom: 20px;
-        padding: 5px 20px 5px 0;
-        box-sizing: border-box;
-        background-color: var.$card-background;
-        border-radius: 20px;
-        border: 2px solid #CCCCCC;
 
         a {
-            display: flex;
+            display: inline-flex;
             justify-content: left;
             align-items: center;
             height: 100%;
+            width: 190px;
+            padding: 5px 20px 5px 0;
+            box-sizing: border-box;
             text-decoration: none;
             color: black;
+            background-color: var.$card-background;
+            border-radius: 20px;
+            border: 2px solid #CCCCCC;
 
             img {
                 display: inline-block;
@@ -167,7 +190,13 @@
 
         &:nth-child(2) a img {
             position: relative;
-            left: 3.7px;
+            left: 2.6px;
+        }
+
+        &:nth-child(4) a img {
+            position: relative;
+            bottom: -1px;
+            transform: scale(1.15);
         }
     }
 }

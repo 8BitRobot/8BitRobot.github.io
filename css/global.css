@@ -109,7 +109,7 @@ main {
 .project-cards-container > div .text-container.gh:after {
   left: 31%;
   right: 31%;
-  background-color: #3B1D82;
+  background-color: #41176E;
 }
 .project-cards-container > div .text-container.she:after {
   left: 15%;
@@ -124,7 +124,17 @@ main {
 .project-cards-container > div .text-container.tvcd:after {
   left: 14%;
   right: 14%;
-  background-color: #39B54A;
+  background-color: #000000;
+}
+.project-cards-container > div .text-container.cd:after {
+  left: 31%;
+  right: 31%;
+  background-color: #49AF7F;
+}
+.project-cards-container > div .text-container.fh:after {
+  left: 27%;
+  right: 27%;
+  background-color: #8DC8D7;
 }
 
 /*# sourceMappingURL=global.css.map */

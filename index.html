@@ -17,7 +17,7 @@
             <div>
                 <a href="/resume.html">Resume</a>
                 <a>Aspirations</a>
-                <a>Projects</a>
+                <a href="/projects.html">Projects</a>
             </div>
         </header>
         <main>
@@ -32,15 +32,55 @@
                     <p>I'm interested in computer science, math, aerospace and astrophysics, and economics.</p>
                 </div>
             </section>
+            <script>
+
+                let sendData = async function (name, email, message) {
+
+                    let response = await fetch(`https://script.google.com/macros/s/AKfycbww9-3T06iChmDoVHKtkPsGfz7ayo4Chm47L0NAhkv5xfR-Um0/exec?name=${name}&email=${email}&message=${message}`, {
+                        method: "GET",
+                        mode: "cors",
+                    });
+                    return response.json();
+                }
+
+                let submitForm = function () {
+                    let name = document.getElementsByName("contact-name")[0].value;
+                    let email = document.getElementsByName("contact-email")[0].value;
+                    let message = document.getElementsByName("contact-message")[0].value;
+                    let errorText = document.getElementById("contact-form-error");
+                    let emailValidRegex = /^(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])$/g
+
+                    if (name.length <= 0 || email.length <= 0 || message.length <= 0) {
+                        errorText.classList.remove("success");
+                        errorText.innerText = "You can't leave any fields blank."
+                    } else if (!email.match(emailValidRegex)) {
+                        errorText.classList.remove("success");
+                        errorText.innerText = "That email address isn't valid."
+                    } else {
+                        sendData(encodeURIComponent(name), encodeURIComponent(email), encodeURIComponent(message)).then((res) => {
+                            if (res.result === "success") {
+                                errorText.classList.add("success");
+                                errorText.innerText = "Thanks for reaching out!";
+                            } else {
+                                errorText.classList.remove("success");
+                                errorText.innerText = "That didn't work. Please try again later.";
+                            }
+                        });
+                    }
+                }
+
+            </script>
             <section id="contact">
                 <div>
                     <h3>Contact me</h3>
-                    <form>
+                    <form id="contact-form" action="javascript:;">
                         <div>
-                            <input placeholder="Name">
-                            <input placeholder="Email">
+                            <input name="contact-name" placeholder="Name">
+                            <input name="contact-email" placeholder="Email">
                         </div>
-                        <textarea placeholder="Message"></textarea>
+                        <textarea name="contact-message" placeholder="Message"></textarea>
+                        <button onclick="submitForm()">Submit</button>
+                        <span id="contact-form-error"></span>
                     </form>
                 </div>
                 <div>
@@ -57,6 +97,13 @@
                             <span>GitHub</span>
                         </a>
                     </p>
+                    <!-- <p>
+                        <a href="https://www.discordapp.com">
+                            <img src="/img/socials/discord.svg">
+                            <span>Discord</span>
+                        </a>
+                        <span class="status-text">Username copied!</span>
+                    </p> -->
                 </div>
             </section>
         </main>

@@ -1,0 +1,74 @@
+@use "var";
+@use "sass:list";
+@use "sass:map";
+@use "sass:math";
+
+@mixin project-card-display ($size, $cards) {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    & > div {
+        position: relative;
+        z-index: -1;
+        height: $size;
+        width: $size;
+        margin: 25px;
+        border-radius: var.$card-border-radius;
+        background-color: var.$card-background;
+        box-shadow: var.$box-shadow;
+        box-sizing: border-box;
+
+        .image-container {
+            display: flex;
+            align-items: flex-end;
+            position: absolute;
+            top: 10px;
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+            border-radius: var.$card-border-radius;
+            z-index: -1;
+
+            img {
+                width: 100%;
+                height: 210px;
+                border-radius: var.$card-border-radius;
+                object-fit: contain;
+                vertical-align: middle;
+            }
+        }
+
+        .text-container {
+            position: relative;
+            height: 40px;
+            padding: 10px;
+            font-size: 18px;
+            line-height: 40px;
+            font-weight: 500;
+            text-align: center;
+
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: 10px;
+                height: 3px;
+                border-radius: 1.5px;
+            }
+
+            @each $class, $card in $cards {
+                &.#{$class}:after {
+                    @debug list.nth($card, 1);
+                    left: #{list.nth($card, 1)};
+                    right: #{list.nth($card, 1)};
+                    background-color: #{list.nth($card, 2)};
+                }
+            }
+        }
+    }
+}
+
+@function random-focus-color () {
+    $colors: (#F94144, #F3722C, #F8961E, #F9844A, #F9C74F, #90BE6D, #43AA8B, #4D908E, #577590, #277DA1);
+    @return list.nth($colors, math.random(9));
+}

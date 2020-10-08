@@ -1,0 +1,57 @@
+#resume-text {
+  font-size: 18px;
+  width: 80%;
+  min-width: 280px;
+  margin: 0 auto;
+}
+#resume-text > h2 {
+  width: 100%;
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 1em;
+  text-align: center;
+}
+#resume-text #skills-exp {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+}
+#resume-text #skills-exp section:first-child {
+  margin-right: 25px;
+  width: 320px;
+}
+#resume-text #skills-exp section:last-child {
+  margin-left: 25px;
+  width: 480px;
+}
+#resume-text section {
+  margin-bottom: 50px;
+}
+#resume-text section h2 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+#resume-text > section h2 {
+  text-align: center;
+}
+#resume-text h3 {
+  font-size: 1.2em;
+  line-height: 25.2px;
+  margin-bottom: 18px;
+}
+#resume-text h3.bold {
+  font-weight: 500;
+}
+#resume-text p {
+  line-height: 25.2px;
+  margin: 0.6em 0;
+}
+#resume-text p img {
+  height: 1.4em;
+  width: 64px;
+  vertical-align: top;
+  object-fit: contain;
+}
+
+/*# sourceMappingURL=resume.css.map */

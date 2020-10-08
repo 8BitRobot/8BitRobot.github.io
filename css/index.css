@@ -78,6 +78,14 @@
   flex-flow: row;
   justify-content: space-between;
 }
+#contact form span {
+  margin-left: 4px;
+  font-size: 0.78em;
+  color: #B70104;
+}
+#contact form span.success {
+  color: #009008;
+}
 #contact input {
   display: inline-block;
   width: 45%;
@@ -93,15 +101,16 @@
   margin-right: 10%;
 }
 #contact input:first-child:focus {
-  border-bottom-color: #F9844A;
+  border-bottom-color: #4D908E;
 }
 #contact input:nth-child(2):focus {
-  border-bottom-color: #F9C74F;
+  border-bottom-color: #43AA8B;
 }
 #contact textarea {
   width: 100%;
-  height: 200px;
+  height: 150px;
   padding: 10px;
+  margin-bottom: 18px;
   box-sizing: border-box;
   background-color: #EEEEEE;
   border-radius: 20px;
@@ -111,26 +120,35 @@
   transition: border-color 0.2s;
 }
 #contact textarea:focus {
-  border-color: #90BE6D;
+  border-color: #577590;
+}
+#contact button {
+  width: 130px;
+  padding: 5px 20px;
+  border: 2px solid #CCCCCC;
+  border-radius: 20px;
+  background-color: #EEEEEE;
+  cursor: pointer;
 }
 #contact p {
   height: 40px;
-  width: 190px;
+  width: 100%;
   margin-top: 30px;
   margin-bottom: 20px;
-  padding: 5px 20px 5px 0;
-  box-sizing: border-box;
-  background-color: #EEEEEE;
-  border-radius: 20px;
-  border: 2px solid #CCCCCC;
 }
 #contact p a {
-  display: flex;
+  display: inline-flex;
   justify-content: left;
   align-items: center;
   height: 100%;
+  width: 190px;
+  padding: 5px 20px 5px 0;
+  box-sizing: border-box;
   text-decoration: none;
   color: black;
+  background-color: #EEEEEE;
+  border-radius: 20px;
+  border: 2px solid #CCCCCC;
 }
 #contact p a img {
   display: inline-block;
@@ -144,7 +162,12 @@
 }
 #contact p:nth-child(2) a img {
   position: relative;
-  left: 3.7px;
+  left: 2.6px;
+}
+#contact p:nth-child(4) a img {
+  position: relative;
+  bottom: -1px;
+  transform: scale(1.15);
 }
 
 /*# sourceMappingURL=index.css.map */
