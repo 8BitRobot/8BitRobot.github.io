@@ -101,10 +101,10 @@
   margin-right: 10%;
 }
 #contact input:first-child:focus {
-  border-bottom-color: #F94144;
+  border-bottom-color: #F8961E;
 }
 #contact input:nth-child(2):focus {
-  border-bottom-color: #90BE6D;
+  border-bottom-color: #577590;
 }
 #contact textarea {
   width: 100%;
@@ -120,7 +120,7 @@
   transition: border-color 0.2s;
 }
 #contact textarea:focus {
-  border-color: #F8961E;
+  border-color: #F3722C;
 }
 #contact button {
   width: 130px;

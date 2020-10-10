@@ -63,18 +63,20 @@ main {
     padding: (var.$header-height + 50px) 50px;
 }
 
-$project-cards-map: (
-    nsl: (17%, #7A94FF),
-    gh: (31%, #41176E),
-    she: (15%, #D9025C),
-    bact: (7%, #7A94FF),
-    tvcd: (14%, #000000),
-    cd: (31%, #49AF7F),
-    fh: (27%, #8DC8D7),
-);
+code {
+    font-family: "Consolas", "sans-serif";
+    padding: 3px 6px;
+    border: 1px solid #CCCCCC;
+    background-color: #DDDDDD;
+    border-radius: 3px;
+}
+
+.darkened {
+    filter: brightness(0.3);
+}
 
 .project-cards-container {
-    @include mix.project-card-display(280px, $project-cards-map)
+    @include mix.project-card-display(280px, var.$project-cards-map)
 }
 
 

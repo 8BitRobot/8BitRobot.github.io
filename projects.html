@@ -10,7 +10,25 @@
         <link rel="stylesheet" href="css/projects.css">
     </head>
     <body>
-        <header>
+        <section id="popup-container">
+            <div id="popup">
+                <div class=""></div>
+                <div>
+                    <img id="popup-image" class="left" src="">
+                    <div>
+                        <div id="acquired-skills">
+                            <h3>Skills acquired:</h3>
+                        </div>
+                        <div id="refined-skills">
+                            <h3>Skills refined:</h3>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                </div>
+            </div>
+        </section>
+        <header class="darkened">
             <div>
                 <h1><a href="/">Premkumar Giridhar</a></h1>
             </div>
@@ -20,60 +38,122 @@
                 <a href="/projects.html">Projects</a>
             </div>
         </header>
-        <main>
+        <main class="darkened">
             <section>
                 <h2>Community Projects and Free Work</h2>
                 <div class="project-cards-container">
-                    <div>
-                        <div class="image-container">
-                            <img src="/img/projects/bact.jpg">
+                    <a href="#bact">
+                        <div>
+                            <div class="image-container">
+                                <img src="/img/projects/bact.jpg">
+                            </div>
+                            <div class="text-container bact">
+                                Bay Area COVID-19 Tracker
+                            </div>
+                            <div class="description-container">
+                                A COVID-19 tracker for the Bay Area with stats, news, and relevant information.
+                            </div>
                         </div>
-                        <div class="text-container bact">
-                            Bay Area COVID-19 Tracker
+                    </a>
+                    <a href="#choredash">
+                        <div>
+                            <div class="image-container">
+                                <img src="/img/projects/choredash.jpg">
+                            </div>
+                            <div class="text-container cd">
+                                ChoreDash
+                            </div>
+                            <div class="description-container">
+                                A volunteering management service to connect helpers with those in need.
+                            </div>
                         </div>
-                    </div>
-                    <div>
-                        <div class="image-container">
-                            <img src="/img/projects/choredash.jpg">
+                    </a>
+                    <a href="#studioheartengine">
+                        <div>
+                            <div class="image-container">
+                                <img src="/img/projects/studio_heart_engine.png">
+                            </div>
+                            <div class="text-container she">
+                                Studio Heart Engine
+                            </div>
+                            <div class="description-container">
+                                Foothill High School's largest game development club.
+                            </div>
                         </div>
-                        <div class="text-container cd">
-                            ChoreDash
+                    </a>
+                    <a>
+                        <div>
+                            <div class="image-container">
+                                <img src="/img/projects/gigahacks.jpg">
+                            </div>
+                            <div class="text-container gh">
+                                Gigahacks
+                            </div>
+                            <div class="description-container">
+                                An annual hackathon with over 200 total participants.
+                            </div>
                         </div>
-                    </div>
-                    <div>
-                        <div class="image-container">
-                            <img src="/img/projects/studio_heart_engine.png">
+                    </a>
+                    <a>
+                        <div>
+                            <div class="image-container">
+                                <img src="/img/projects/falconhacks.png">
+                            </div>
+                            <div class="text-container fh">
+                                FalconHacks
+                            </div>
+                            <div class="description-container">
+                                Foothill High School's largest virtual hackathon.
+                            </div>
                         </div>
-                        <div class="text-container she">
-                            Studio Heart Engine
+                    </a>
+                    <a>
+                        <div>
+                            <div class="image-container">
+                                <img src="/img/projects/tvcd.png">
+                            </div>
+                            <div class="text-container tvcd">
+                                Tri-Valley Coder Dojo
+                            </div>
+                            <div class="description-container">
+                                A place for young programmers to grow their skills.
+                            </div>
                         </div>
-                    </div>
-                    <div>
-                        <div class="image-container">
-                            <img src="/img/projects/gigahacks.jpg">
-                        </div>
-                        <div class="text-container gh">
-                            Gigahacks
-                        </div>
-                    </div>
-                    <div>
-                        <div class="image-container">
-                            <img src="/img/projects/falconhacks.png">
-                        </div>
-                        <div class="text-container fh">
-                            FalconHacks
-                        </div>
-                    </div>
-                    <div>
-                        <div class="image-container">
-                            <img src="/img/projects/tvcd.png">
-                        </div>
-                        <div class="text-container tvcd">
-                            Tri-Valley Coder Dojo
-                        </div>
-                    </div>
+                    </a>
                 </div>
+            </section>
             <section>
+                <h2>Business Endeavors</h2>
+                <div class="project-cards-container">
+                    <a>
+                        <div>
+                            <div class="image-container">
+                                <img src="/img/projects/nize_presence.png">
+                            </div>
+                            <div class="text-container nsl">
+                                Nize Presence
+                            </div>
+                            <div class="description-container">
+                                An in-class attendance system using RFID technology.
+                            </div>
+                        </div>
+                    </a>
+                    <a>
+                        <div>
+                            <div class="image-container">
+                                <img src="/img/projects/nize_systems_llc.png">
+                            </div>
+                            <div class="text-container nsl">
+                                Nize Presence Remote
+                            </div>
+                            <div class="description-container">
+                                An automated remote attendance solution.
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
         </main>
+        <script src="js/projects_popup.js"></script>
     </body>
 </html>
