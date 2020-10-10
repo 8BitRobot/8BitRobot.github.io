@@ -54,4 +54,22 @@
   object-fit: contain;
 }
 
+#resume-download {
+  display: block;
+  width: 180px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 2px solid #BA181B;
+  background-color: #BA181B;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.3s;
+}
+#resume-download:hover {
+  background-color: transparent;
+  color: #BA181B;
+}
+
 /*# sourceMappingURL=resume.css.map */
