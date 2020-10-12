@@ -13,7 +13,7 @@
 }
 #resume-text #skills-exp {
   display: flex;
-  flex-flow: row;
+  flex-flow: row wrap;
   justify-content: center;
 }
 #resume-text #skills-exp section:first-child {

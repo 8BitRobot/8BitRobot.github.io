@@ -75,12 +75,26 @@ let projects = {
         skillsRefined: ["webdev", "python"],
         title: "Tri-Valley Coder Dojo",
         description: ["Before the COVID-19 pandemic hit, I volunteered weekly as a programming mentor at the Tri-Valley Coder Dojo. The Coder Dojo is a weekly event where kids of all ages can come to work on their own projects and receive guidance from more experienced developers. I went there primarily to help kids with Python and web development, but I also started teaching myself Java to help the kids working on Java projects as well."]
+    },
+    "presence": {
+        class: "pbn",
+        img: "/img/projects/nize_presence.png",
+        skillsAcquired: ["nodejs"],
+        skillsRefined: ["python| (RC522, FastAPI)", "vuejs"],
+        title: "Presence by Nize",
+        description: ["Presence was the first attendance system I worked on with my startup, Nize Systems. Essentially, it's a small wall-mounted device with an embedded RC522 RFID scanner. Students will have RFID cards, stickers, or keychains with data such as their name and ID number written to them, and they can scan their card on the device to check into class. Our system includes features to handle signing out of class (for example, to use the restroom) and digitized passes for students that arrive to class late or need to be excused, and it's highly customizable to the needs of a school.",
+        "My primary contribution was in developing the software that runs on our Presence devices. Originally, I taught myself Node.js and used that to develop the device GUI and a websocket to make it communicate with some Python card-scanning code. However, after running some benchmarks, I determined that Vue.js would be more efficient, so I switched to Vue.js and an API written with Python and FastAPI."]
+    },
+    "presenceremote": {
+        class: "prbn",
+        img: "/img/projects/nize_systems_llc.png",
+        skillsAcquired: ["sass"],
+        skillsRefined: ["python| (FastAPI)", "vuejs"],
+        title: "Presence Remote by Nize",
+        description: ["When the COVID-19 pandemic hit, in-person school became distance learning, and our in-class Presence devices were rendered useless. However, we noticed that teachers were still struggling with attendance, only this time it was through video calls. In order to alleviate that, we developed Presence Remote. When teachers create Zoom meetings through the Presence Remote dashboard, it access the Zoom APIs to monitor attendance automatically. On the Presence Remote dashboard, teachers can view live updates of students leaving and entering the meeting, making the attendance process a lot simpler.",
+        "My primary contribution was in the front-end. Using Vue.js and Sass, a styling language extremely new to me at the time, a colleague and I developed the entire web dashboard and implemented the live Zoom attendance roster."]
     }
 };
-
-/*
-    I have omitted my `projects` and `skills` objects from this code sample. They're just objects that contain lots of text and/or image paths.
-*/
 
 let currentHash = "";
 
@@ -89,7 +103,8 @@ let loadPopup = function () {
     hash = window.location.hash.substring(1).toLowerCase();
 
     if (hash === "") {
-        // if the hash is empty, exit the popup
+        // if the hash is empty, exit the 
+        currentHash = "";
         document.querySelector("header").classList.remove("darkened");
         document.querySelector("main").classList.remove("darkened");
         document.getElementById("popup-container").classList.add("hidden");

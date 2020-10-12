@@ -163,6 +163,18 @@ code {
   right: 27%;
   background-color: #2C264D;
 }
+.project-cards-container a > div .text-container.pbn:after {
+  --expand-bar-scale: -2.5641025641;
+  left: 20%;
+  right: 20%;
+  background-color: #7A94FF;
+}
+.project-cards-container a > div .text-container.prbn:after {
+  --expand-bar-scale: -6.6666666667;
+  left: 8%;
+  right: 8%;
+  background-color: #7A94FF;
+}
 .project-cards-container a > div .description-container {
   display: none;
   align-items: center;

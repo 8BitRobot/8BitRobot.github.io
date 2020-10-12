@@ -34,11 +34,8 @@
   margin-bottom: 0.8em;
 }
 #greeting div:nth-child(2) p {
-  line-height: 1.15em;
-  margin-bottom: 0.4em;
-}
-#greeting div:nth-child(2) p:last-child {
-  margin-top: 30px;
+  line-height: 1.3em;
+  margin-bottom: 0.8em;
 }
 
 #contact {
@@ -104,7 +101,7 @@
   border-bottom-color: #F3722C;
 }
 #contact input:nth-child(2):focus {
-  border-bottom-color: #F8961E;
+  border-bottom-color: #4D908E;
 }
 #contact textarea {
   width: 100%;
@@ -120,7 +117,7 @@
   transition: border-color 0.2s;
 }
 #contact textarea:focus {
-  border-color: #43AA8B;
+  border-color: #90BE6D;
 }
 #contact button {
   width: 130px;
