@@ -21,6 +21,7 @@
 #greeting div:nth-child(2) {
   display: inline-block;
   font-size: 18px;
+  max-width: 700px;
 }
 #greeting div:nth-child(2) h2 {
   font-size: 2em;
@@ -98,10 +99,10 @@
   margin-right: 10%;
 }
 #contact input:first-child:focus {
-  border-bottom-color: #F3722C;
+  border-bottom-color: #4D908E;
 }
 #contact input:nth-child(2):focus {
-  border-bottom-color: #4D908E;
+  border-bottom-color: #F9C74F;
 }
 #contact textarea {
   width: 100%;
@@ -117,7 +118,7 @@
   transition: border-color 0.2s;
 }
 #contact textarea:focus {
-  border-color: #90BE6D;
+  border-color: #F94144;
 }
 #contact button {
   width: 130px;
