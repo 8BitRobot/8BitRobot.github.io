@@ -225,7 +225,9 @@ let loadPopup = function () {
 }
 
 window.onload = () => {
-    console.log(loadPopup());
+    if (window.location.hash !== "") {
+        console.log(loadPopup());
+    }
 }
 
 window.onhashchange = () => {
