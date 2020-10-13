@@ -99,10 +99,10 @@
   margin-right: 10%;
 }
 #contact input:first-child:focus {
-  border-bottom-color: #577590;
+  border-bottom-color: #BA181B;
 }
 #contact input:nth-child(2):focus {
-  border-bottom-color: #F9C74F;
+  border-bottom-color: #BA181B;
 }
 #contact textarea {
   width: 100%;
@@ -118,14 +118,15 @@
   transition: border-color 0.2s;
 }
 #contact textarea:focus {
-  border-color: #F94144;
+  border-color: #BA181B;
 }
 #contact button {
   width: 130px;
-  padding: 5px 20px;
-  border: 2px solid #CCCCCC;
+  padding: 7px 20px;
   border-radius: 20px;
-  background-color: #EEEEEE;
+  border: 2px solid #BA181B;
+  background-color: #BA181B;
+  color: white;
   cursor: pointer;
 }
 #contact p {

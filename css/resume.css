@@ -56,16 +56,17 @@
 
 #resume-download {
   display: block;
-  width: 180px;
+  width: 225px;
   margin: 0 auto;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 13px 20px;
+  border-radius: 8px;
   border: 2px solid #BA181B;
   background-color: #BA181B;
   color: white;
+  font-size: 20px;
   text-align: center;
   text-decoration: none;
-  transition: 0.3s;
+  transition: background-color 0.3s, color 0.3s;
 }
 #resume-download:hover {
   background-color: transparent;

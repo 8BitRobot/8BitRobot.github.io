@@ -120,12 +120,12 @@
             margin-right: 10%;
 
             &:focus {
-                border-bottom-color: mix.random-focus-color()
+                border-bottom-color: #BA181B;
             }
         }
 
         &:nth-child(2):focus {
-            border-bottom-color: mix.random-focus-color()
+            border-bottom-color: #BA181B;
         }
     }
 
@@ -143,16 +143,17 @@
         transition: border-color 0.2s;
 
         &:focus {
-            border-color: mix.random-focus-color();
+            border-color: #BA181B;
         }
     }
 
     button {
         width: 130px;
-        padding: 5px 20px;
-        border: 2px solid #CCCCCC;
-        border-radius: 20px;
-        background-color: var.$card-background;
+        padding: 7px 20px;
+        border-radius: var.$card-border-radius;
+        border: 2px solid #BA181B;
+        background-color: #BA181B;
+        color: white;
         cursor: pointer;
     }
 
