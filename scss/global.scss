@@ -30,12 +30,17 @@ header {
 
         h1 {
             margin: 0;
-            font-weight: bold;
+            font-weight: 600;
             line-height: var.$header-height;
 
             a {
                 text-decoration: none;
                 color: black;
+                transition: 0.3s;
+
+                &:hover {
+                    color: #BA181B;
+                }
             }
         }
     }
@@ -47,6 +52,8 @@ header {
         margin-left: auto;
 
         a {
+            font-size: 18px;
+            font-weight: 600;
             position: relative;
             margin-right: 30px;
             line-height: var.$header-height;
@@ -101,28 +108,20 @@ code {
     @include mix.project-card-display(280px, var.$project-cards-map)
 }
 
+@media only screen and (max-width: 760px) {
+    header {
+        padding: 0 25px;
 
+        div:first-child {
+            width: 200px;
+        }
 
-// &.nsl:after {
-//     left: 17%;
-//     right: 17%;
-//     background-color: #7A94FF;
-// }
+        h1 a span {
+            display: none;
+        }
+    }
 
-// &.gh:after {
-//     left: 31%;
-//     right: 31%;
-//     background-color: #3B1D82;
-// }
-
-// &.she:after {
-//     left: 15%;
-//     right: 15%;
-//     background-color: #D9025C;
-// }
-
-// &.bact:after {
-//     left: 5%;
-//     right: 5%;
-//     background-color: #7A94FF;
-// }
+    main {
+        padding: (var.$header-height + 50px) 25px;
+    }
+}

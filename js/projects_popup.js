@@ -1,3 +1,6 @@
+let popupIsOpen = window.location.hash !== "";
+let scrollPosition = null;
+
 let skills = {
     "webdev": ["HTML, CSS, JS", "/img/skills/html5.png"],
     "sass": ["Sass", "/img/skills/sass.svg"],
@@ -10,7 +13,6 @@ let skills = {
     "linux": ["Linux", "/img/skills/linux.png"],
     "godot": ["Godot", "/img/skills/godot.png"],
 };
-
 
 let projects = {
     "bact": {
@@ -84,7 +86,16 @@ let projects = {
         skills: ["python| (FastAPI)", "vuejs", "sass"],
         title: "Presence Remote by Nize",
         description: ["When the COVID-19 pandemic hit, in-person school became distance learning, and our in-class Presence devices were rendered useless. However, we noticed that teachers were still struggling with attendance, only this time it was through video calls. In order to alleviate that, we developed Presence Remote. When teachers create Zoom meetings through the Presence Remote dashboard, it access the Zoom APIs to monitor attendance automatically. On the Presence Remote dashboard, teachers can view live updates of students leaving and entering the meeting, making the attendance process a lot simpler.",
-        "My primary contribution was in the front-end. Using Vue.js and Sass, a styling language extremely new to me at the time, a colleague and I developed the entire web dashboard and implemented the live Zoom attendance roster."]
+        "My primary contribution was in the front-end. Using Vue.js and Sass, a styling language I had only just begun to learn, a colleague and I developed the entire web dashboard and implemented the live Zoom attendance roster."]
+    },
+    "mafiabot": {
+        class: "dmb",
+        img: "/img/projects/mafiabot.png",
+        skills: ["nodejs| (Discord.js)"],
+        title: "Town of Mafiaville",
+        description: ["Town of Mafiaville was a Discord bot that my friend and I created to manage instances of the party game Mafia. Using Discord.js, a popular and well-documented Node.js library to create Discord bots, we created a bot that assigns roles, manages communication permissions in the Discord server, and handles all the game's functions. I used Pixilart, a free online editor for pixel art graphics, to create all of the images displayed in the bot's messages.",
+        "I primarily worked on setting up the general structure of the bot, implementing most of the game's roles, creating a last-will feature, and drawing all of the graphics involved. I also made minor contributions to the voting system and other miscellaneous features."],
+        addLink: ["Due to financial limitations, the bot isn't hosted; however, you can find the source code [here].", "https://www.github.com/8BitRobot/Mafia-Bot"],
     }
 };
 
@@ -95,11 +106,12 @@ let loadPopup = function () {
     hash = window.location.hash.substring(1).toLowerCase();
 
     if (hash === "") {
-        // if the hash is empty, exit the 
+        // if the hash is empty, exit popup
         currentHash = "";
         document.querySelector("header").classList.remove("darkened");
         document.querySelector("main").classList.remove("darkened");
         document.getElementById("popup-container").classList.add("hidden");
+        popupIsOpen = false;
         return "Exited popup.";
     } else if (hash === currentHash) {
         // if the hash is the same as before, do nothing
@@ -108,6 +120,8 @@ let loadPopup = function () {
         // if the hash isn't in my preset list, do nothing
         return "Hash doesn't exist.";
     }
+
+    scrollPosition = window.scrollY;
 
     /* 
         set the heading in the popup to the title of the project
@@ -126,12 +140,12 @@ let loadPopup = function () {
         then loop through my list and add a P element for each element in the list
     */
     let skillsDiv = document.getElementById("skills");
-    console.log(skillsDiv);
+    // console.log(skillsDiv);
     document.querySelectorAll("#skills > p").forEach(el => el.remove());
     
     for (let i of projects[hash].skills) {
         let elTextList = i.split("|");
-        console.log(elTextList);
+        // console.log(elTextList);
 
         let para = document.createElement("p");
         let img = document.createElement("img");
@@ -172,7 +186,7 @@ let loadPopup = function () {
     // at the very end of my description DIV, add some text and a link if specified
     if (projects[hash].addLink) {
         let textContent = projects[hash].addLink[0];
-        console.log(textContent);
+        // console.log(textContent);
         let textToLink = textContent.match(/\[(.+)\]/);
         let textAround = textContent.split(textToLink[0]);
 
@@ -198,17 +212,18 @@ let loadPopup = function () {
     document.querySelector("main").classList.add("darkened");
     document.getElementById("popup-container").classList.remove("hidden");
     currentHash = hash;
+    popupIsOpen = true;
     return "Popup loaded successfully.";
 }
 
 window.onload = () => {
     if (window.location.hash !== "") {
-        console.log(loadPopup());
+        loadPopup();
     }
 }
 
 window.onhashchange = () => {
-    console.log(loadPopup());
+    loadPopup();
 }
 
 // hide the popup if they click outside of it
@@ -218,11 +233,15 @@ document.addEventListener("click", (event) => {
     
     do {
         if (target == popup) {
+            popupIsOpen = true;
             return;
         }
-
         target = target.parentNode;
     } while (target);
-
-    window.location.hash = "";
+    
+    if (popupIsOpen) {
+        window.location.hash = "";
+        window.scrollTo(0, scrollPosition);
+        scrollPosition = null;
+    }
 });

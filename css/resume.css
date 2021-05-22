@@ -7,7 +7,7 @@
 #resume-text > h2 {
   width: 100%;
   font-size: 3em;
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: 1em;
   text-align: center;
 }
@@ -29,7 +29,7 @@
 }
 #resume-text section h2 {
   font-size: 2em;
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: 0.5em;
 }
 #resume-text > section h2 {

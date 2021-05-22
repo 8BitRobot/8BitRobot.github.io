@@ -29,14 +29,14 @@
 
         h2 {
             font-size: 2em;
-            font-weight: bold;
+            font-weight: 600;
             margin-top: 0.4em;
             margin-bottom: 0.4em;
         }
 
         h3 {
             font-size: 1.5em;
-            font-weight: bold;
+            font-weight: 600;
             margin-bottom: 0.8em;
         }
 
@@ -199,6 +199,23 @@
             position: relative;
             bottom: -1px;
             transform: scale(1.15);
+        }
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    #greeting {
+        display: block;
+        
+        div:first-child {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        div:nth-child(2) {
+            margin-top: 20px;
+            text-align: center;
         }
     }
 }
