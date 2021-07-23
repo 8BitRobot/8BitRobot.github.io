@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden;
+}
+
 #resume-text {
   font-size: 18px;
   width: 100%;
@@ -52,6 +56,15 @@
   width: 64px;
   vertical-align: top;
   object-fit: contain;
+}
+@media only screen and (max-width: 1000px) {
+  #resume-text section {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  #resume-text section h2, #resume-text section h3 {
+    text-align: center;
+  }
 }
 
 #resume-download {

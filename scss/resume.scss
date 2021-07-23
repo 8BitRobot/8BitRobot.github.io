@@ -1,6 +1,10 @@
 @use "var";
 @use "mix";
 
+body {
+    overflow-x: hidden;
+}
+
 #resume-text {
     font-size: 18px;
     width: 100%;
@@ -64,6 +68,17 @@
             width: 64px;
             vertical-align: top;
             object-fit: contain;
+        }
+    }
+
+    @media only screen and (max-width: 1000px) {
+        section {
+            margin-left: 0;
+            margin-right: 0;
+
+            h2, h3 {
+                text-align: center;
+            }
         }
     }
 }

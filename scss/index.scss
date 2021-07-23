@@ -9,8 +9,10 @@
 
     div:first-child {
         display: inline-block;
-        width: 400px;
-        height: 300px;
+        width: 80vw;
+        max-width: 400px;
+        height: 60vw;
+        max-height: 300px;
         margin-right: 4vw;
         box-sizing: border-box;
         background-image: url("/img/self_portrait.jpg");
@@ -54,8 +56,8 @@
 #contact {
     display: flex;
     flex-flow: row;
-    justify-content: space-between;
-    width: 80%;
+    justify-content: center;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
     padding: 20px 0;
@@ -63,19 +65,17 @@
     border-radius: var.$card-border-radius;
     font-size: 18px;
 
-    & > div {
-        padding: 0 20px;
-    }
-
     & > div:first-child {
         flex-grow: 1;
+        padding-left: 20px;
         padding-right: 40px;
         border-right: 2px solid #CCCCCC;
     }
 
     & > div:last-child {
         padding-left: 40px;
-        flex-basis: 360px;
+        padding-right: 20px;
+        flex-basis: 220px;
         flex-grow: 0;
         flex-shrink: 0;
         order: 2;
@@ -108,7 +108,7 @@
     input {
         display: inline-block;
         width: 45%;
-        min-width: 250px;
+        // min-width: 250px;
         background-color: transparent;
         border: none;
         outline: none;
@@ -199,6 +199,50 @@
             position: relative;
             bottom: -1px;
             transform: scale(1.15);
+        }
+    }
+
+    @media only screen and (max-width: 1000px) {
+        width: 90%;
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        & > div:first-child {
+            width: 100%;
+            padding: 0 20px 20px;
+            border-right: unset;
+        }
+
+        & > div:last-child {
+            width: 100%;
+            padding: 20px 20px 0;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        form div {
+            display: block;
+        }
+
+        button {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+        }
+
+        p {
+            display: flex;
+            flex-flow: row;
+            justify-content: center;
         }
     }
 }

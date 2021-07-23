@@ -27,9 +27,9 @@
                 <div>
                     <h2>Hello!</h2>
                     <h3>I'm Premkumar.</h3>
-                    <p>I'm a student at Foothill High School and a passionate developer and programming mentor.</p>
+                    <p>I'm an incoming student at UCLA, a passionate developer, and a programming mentor.</p>
                     <p>My code helps others in a variety of fields, from education to health and public awareness.</p>
-                    <p>I'm interested in computer science, math, aeronautics, and economics. I'm a prospective Computer Science major.</p>
+                    <p>I'm interested in computer science, aeronautics, and linguistics. I'm a prospective Computer Science major.</p>
                 </div>
             </section>
             <script>
@@ -49,7 +49,7 @@
                     let message = document.getElementsByName("contact-message")[0].value;
                     let errorText = document.getElementById("contact-form-error");
                     let emailValidRegex = /^(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])$/g
-
+                    // regex taken from online
                     if (name.length <= 0 || email.length <= 0 || message.length <= 0) {
                         errorText.classList.remove("success");
                         errorText.innerText = "You can't leave any fields blank."
@@ -97,13 +97,6 @@
                             <span>GitHub</span>
                         </a>
                     </p>
-                    <!-- <p>
-                        <a href="https://www.discordapp.com">
-                            <img src="/img/socials/discord.svg">
-                            <span>Discord</span>
-                        </a>
-                        <span class="status-text">Username copied!</span>
-                    </p> -->
                 </div>
             </section>
         </main>
