@@ -19,7 +19,17 @@
                 <a href="/resume.html">Resume</a>
                 <a href="/projects.html">Projects</a>
             </div>
+            <div id="menu-icon" onclick="toggleMobileMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </header>
+        <div id="mobile-nav">
+            <a href="/">Home</a>
+            <a href="/resume.html">Resume</a>
+            <a href="/projects.html">Projects</a>
+        </div>
         <main>
             <section id="greeting">
                 <div>
@@ -33,6 +43,10 @@
                 </div>
             </section>
             <script>
+                let toggleMobileMenu = function () {
+                    document.querySelector("#menu-icon").classList.toggle("show");
+                    document.querySelector("#mobile-nav").classList.toggle("show");
+                }
 
                 let sendData = async function (name, email, message) {
 
