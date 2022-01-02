@@ -75,11 +75,13 @@ header div:nth-child(2) a:hover:after {
 
 #mobile-nav {
   position: fixed;
+  z-index: 5;
   flex-flow: column;
   justify-content: start;
   align-items: center;
   width: 300px;
   height: 100vh;
+  display: flex;
   padding-top: 70px;
   background-color: #E1E1E1;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -87,7 +89,6 @@ header div:nth-child(2) a:hover:after {
   transition: transform 0.3s;
 }
 #mobile-nav.show {
-  display: flex;
   transform: translateX(calc(100vw - 300px));
 }
 #mobile-nav a {

@@ -63,11 +63,13 @@ header {
 
 #mobile-nav {
     position: fixed;
+    z-index: 5;
     flex-flow: column;
     justify-content: start;
     align-items: center;
     width: 300px;
     height: 100vh;
+    display: flex;
     padding-top: var.$header-height;
     background-color: #E1E1E1;
     box-shadow: var.$box-shadow;
@@ -75,7 +77,6 @@ header {
     transition: transform 0.3s;
 
     &.show {
-        display: flex;
         transform: translateX(calc(100vw - 300px));
     }
 
