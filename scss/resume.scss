@@ -31,7 +31,7 @@ body {
 
         section:last-child {
             margin-left: 25px;
-            width: 480px;
+            width: 600px;
         }
     }
 
@@ -39,14 +39,16 @@ body {
         margin-bottom: 50px;
 
         h2 {
+            text-align: center;
             font-size: 2em;
             font-weight: 600;
             margin-bottom: 0.5em;
         }
-    }
 
-    & > section h2 {
-        text-align: center;
+        #skills-bullets {
+            display: flex;
+            flex-flow: row wrap;
+        }
     }
 
     h3 {
@@ -62,6 +64,7 @@ body {
     p {
         line-height: 25.2px;
         margin: 0.6em 0;
+        width: 300px;
         
         img {
             height: 1.4em;

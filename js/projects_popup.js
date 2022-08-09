@@ -9,9 +9,8 @@ let skills = {
     "python": ["Python", "/img/skills/python.png"],
     "mongodb": ["MongoDB", "/img/skills/mongodb.png"],
     "git": ["Git", "/img/skills/git.png"],
-    "java": ["Java", "/img/skills/java.png"],
     "linux": ["Linux", "/img/skills/linux.png"],
-    "godot": ["Godot", "/img/skills/godot.png"],
+    "sql": ["SQL", "/img/skills/sql.png"],
 };
 
 let projects = {
@@ -25,7 +24,15 @@ let projects = {
             "Our work was later featured in various local news sources including KRON4, Pleasanton Patch, and Pleasanton Weekly.",
             "My primary contributions were in writing the ExpressJS backend code, designing and developing the Trends page, and making everything mobile-responsive. I also helped develop the Python web scraper.",
         ],
-        addLink: ["You can visit the site [here].", "https://bact.nizesystems.com"]
+    },
+    "jpl": {
+        class: "jpl",
+        img: "/img/self_portrait.jpg",
+        skills: ["python| (Django)", "sql| (MySQL)", "webdev"],
+        title: "NASA Jet Propulsion Lab Internship",
+        description: [
+            "At JPL, I completely revamped an internal lab inspection process to reduce auditor workload by 75%. After identifying flaws in the existing system, I outlined solutions and presented a proof-of-concept for each; finally, I developed a fully-fledged web application to address each concern, automating menial tasks and eliminating redundant steps in the auditing process.",
+        ],
     },
     "choredash": {
         class: "cd",
@@ -35,7 +42,6 @@ let projects = {
         description: [
             "ChoreDash was another website I developed with my team at Nize Systems. We created it to help people at high risk from COVID-19 have their needs met by enlisting the help of volunteers offering their services. Those in need could create posts indicating which chores or errands they needed done, and volunteers would offer help directly through our platform. We wrote the backend in Python using the Falcon API framework, and we used Vue.js for the frontend.",
             "My primary contributions were in both the frontend and backend: implementing the various page components with Vue.js for the frontend, setting up Google authentication and using Axios to make the API calls to our backend, and implementing a few necessary API functions.",
-            "Due to financial limitations, this site has been retired."
         ]
     },
     "studioheartengine": {
@@ -45,7 +51,6 @@ let projects = {
         title: "Studio Heart Engine",
         description: ["I'm the VP of Events at Studio Heart Engine, Foothill High School's largest game development club with over 40 members. Using the Godot Game Engine, we teach our club members the basics of storytelling, character and game design, music, and game development itself. Our goal is to have club members fully prepared to compete in a Game Jam at the end of the year, one that I'm responsible for planning and hosting.",
         "At the moment, the COVID-19 pandemic has negatively impacted many businesses, so I've put my event-planning and sponsorship-hunting to a halt. Instead, my primary contributions are in developing the club's official website."],
-        addLink: ["The website is currently in development. For now, to learn more about the club, you can contact us at [studioheartengine@gmail.com].", "mailto:studioheartengine@gmail.com"],
     },
     "gigahacks": {
         class: "gh",
@@ -54,7 +59,6 @@ let projects = {
         title: "Gigahacks",
         description: ["I'm one of the lead organizers of Gigahacks, an annual hackathon with over 200 total attendees and 20 international participants. So far, we've held an in-person event in 2019 and a virtual event in 2020. At our events, we've run workshops in Python, Java (at an AP Computer Science level), web development, and machine learning.",
         "My primary contributions were in running the workshops and mentoring the attendees. More specifically, I ran the Java and web development workshops, and I helped various participants come up with ideas, implement them, and make their product as good as it could be."],
-        addLink: ["You can visit our official website [here].", "https://www.gigahacks.tech"],
     },
     "falconhacks": {
         class: "fh",
@@ -63,7 +67,6 @@ let projects = {
         title: "FalconHacks",
         description: ["I'm one of the lead organizers of FalconHacks, Foothill High School's largest local hackathon. At our virtual event in May 2020, we had over 45 participants. We've run workshops in Python, web development, app development (with Apache Cordova), and machine learning. We also started the FalconHacks Computing Contest, a challenge where contestants can solve computational problems modeled after the USA Computing Olympiad.",
         "My primary contributions were in writing problems for the Contest, running a web development workshop, and developing the hackathon's official website. This was actually my first major web development project; as such, though the website is functional, I have since learned much better practices than those I applied in that site."],
-        addLink: ["You can visit the official website [here].", "https://www.falconhacks.org"],
     },
     "trivalleycoderdojo": {
         class: "tvcd",
@@ -95,7 +98,6 @@ let projects = {
         title: "Town of Mafiaville",
         description: ["Town of Mafiaville was a Discord bot that my friend and I created to manage instances of the party game Mafia. Using Discord.js, a popular and well-documented Node.js library to create Discord bots, we created a bot that assigns roles, manages communication permissions in the Discord server, and handles all the game's functions. I used Pixilart, a free online editor for pixel art graphics, to create all of the images displayed in the bot's messages.",
         "I primarily worked on setting up the general structure of the bot, implementing most of the game's roles, creating a last-will feature, and drawing all of the graphics involved. I also made minor contributions to the voting system and other miscellaneous features."],
-        addLink: ["Due to financial limitations, the bot isn't hosted; however, you can find the source code [here].", "https://www.github.com/8BitRobot/Mafia-Bot"],
     }
 };
 

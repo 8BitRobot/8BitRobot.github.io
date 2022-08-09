@@ -54,6 +54,9 @@ body > section {
 #popup > div:first-child.nsl {
   background-color: #7A94FF;
 }
+#popup > div:first-child.jpl {
+  background-color: #E31937;
+}
 #popup > div:first-child.gh {
   background-color: #8C52FF;
 }
